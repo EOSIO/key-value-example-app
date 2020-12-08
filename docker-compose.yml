@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  eosio:
+    image: eosio/key-value-example:v0.1.0
+    command: ["nodeos", "--data-dir", "/root/.local/share", "-e", "-p", "eosio", "--hard-replay", "--plugin", "eosio::producer_plugin", "--plugin", "eosio::chain_api_plugin", "--plugin", "eosio::http_plugin", "--http-server-address=0.0.0.0:8888", "--access-control-allow-origin=*", "--contracts-console", "--http-validate-host=false", "--verbose-http-errors", "--max-transaction-time=100"]
+    labels:
+      - "cleanup"
+    ports:
+      - "8888:8888"
+      - "9876:9876"
+    volumes:
+      - ./docker:/opt/eosio/bin
+      - eosiochaindata:/root/.local/share
+
+volumes:
+  eosiochaindata:
+    labels:
+      - "cleanup"

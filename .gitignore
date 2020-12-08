@@ -1,0 +1,14 @@
+*.abi
+*.log
+*.wasm
+!*abi.wasm
+cypress/*
+!cypress/integration
+!cypress/integration/index.spec.js
+*.deb
+dist
+build/*
+!build/.keep
+node_modules
+docker/contracts
+.DS_Store
