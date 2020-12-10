@@ -39,6 +39,7 @@ void kv_todo::del(const std::string& uuid) {
    auto itr = todo_entries.find(uuid);
 
    if (itr != todo_entries.end()) {
+      require_auth(itr.second().get_account_name());
       todo_entries.erase(uuid);
       eosio::print_f("todo_entry was successfully deleted from table.");
    } else {
