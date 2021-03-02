@@ -67,7 +67,7 @@ jobs:
           wait-on: http://localhost:8080
     services:
       nodeos:
-        image: eosio/eosjs-ci:v0.2.8
+        image: eosio/eosjs-ci:release_22.0.x
 
         ports:
           - 8888:8888
