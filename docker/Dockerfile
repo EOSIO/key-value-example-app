@@ -71,14 +71,14 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg ma
  && apt-get update && apt-get -y install libpq-dev
 
 ### eosio
-RUN wget https://github.com/EOSIO/eos/releases/download/v2.1.0-rc3/eosio_2.1.0-rc3-ubuntu-18.04_amd64.deb \
- && apt-get update && apt install -y ./eosio_2.1.0-rc3-ubuntu-18.04_amd64.deb \
- && rm ./eosio_2.1.0-rc3-ubuntu-18.04_amd64.deb
+RUN wget https://github.com/EOSIO/eos/releases/download/v2.1.0/eosio_2.1.0-ubuntu-18.04_amd64.deb \
+ && apt-get update && apt install -y ./eosio_2.1.0-ubuntu-18.04_amd64.deb \
+ && rm ./eosio_2.1.0-ubuntu-18.04_amd64.deb
 
 ### CDT
-RUN wget https://github.com/EOSIO/eosio.cdt/releases/download/v1.8.0-rc2/eosio.cdt_1.8.0-rc2-ubuntu-18.04_amd64.deb \
- && apt-get update && apt install -y ./eosio.cdt_1.8.0-rc2-ubuntu-18.04_amd64.deb \
- && rm ./eosio.cdt_1.8.0-rc2-ubuntu-18.04_amd64.deb
+RUN wget https://github.com/EOSIO/eosio.cdt/releases/download/v1.8.0/eosio.cdt_1.8.0-ubuntu-18.04_amd64.deb \
+ && apt-get update && apt install -y ./eosio.cdt_1.8.0-ubuntu-18.04_amd64.deb \
+ && rm ./eosio.cdt_1.8.0-ubuntu-18.04_amd64.deb
 
 RUN echo "COPYING APP CONTRACTS"
 RUN mkdir -p /opt/eosio/bin/contracts

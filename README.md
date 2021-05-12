@@ -1,5 +1,4 @@
 # Key Value Example App
-![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
 
 Key Value Example App lets developers start using the new key value database feature with EOSIO and eosjs in a matter of minutes. We built this example application with ease of use and simplicity in mind. It can be used by new and advanced developers to try out the new feature. We hope you will find this example application insightful and welcome feedback on future improvements. There are two methods for running the example application at this time.  It can be run locally on your development environment or run with Gitpod.io, a development environment in the cloud.
 
