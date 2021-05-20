@@ -1,4 +1,4 @@
-image: eosio/key-value-example:v0.2.0
+image: eosio/key-value-example:v1.0.0
 
 ports:
 - port: 3000
